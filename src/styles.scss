@@ -42,6 +42,10 @@ mat-card, span  {
         .read-more {
             background-image: linear-gradient(transparent, #f7f7f7);
         }
+
+        mat-card {
+            background-color: #f7f7f7 !important;
+        }
     }
 }
 
