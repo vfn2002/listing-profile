@@ -1,0 +1,14 @@
+.side-spacing {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+    .impression-image {
+        height: 300px;
+    }
+
+    mat-card {
+        padding: 0;
+    }
+}

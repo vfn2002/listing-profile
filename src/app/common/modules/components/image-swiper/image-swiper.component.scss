@@ -1,0 +1,14 @@
+.position-relative {
+    position: relative;
+}
+
+.impression-image {
+    max-height: 80vh;
+    height: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+    .impression-image {
+        height: 300px;
+    }
+}

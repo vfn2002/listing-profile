@@ -1,0 +1,25 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+    <mat-card *ngIf="!(failed$ | async) else failed" class="card-width" fxLayout="column">
+        <ng-container *ngIf="(listing$ | async) as listing else loading">
+            <app-first-impression [listing]="listing"></app-first-impression>
+
+            <app-key-information [listing]="listing"></app-key-information>
+
+            <div class="side-spacing">
+                <app-description [listing]="listing"></app-description>
+            </div>
+        </ng-container>
+    </mat-card>
+</div>
+
+<ng-template #loading>
+    <div class="full-height" fxLayout="column" fxFlex="100%" fxLayoutAlign="center center">
+        <mat-spinner radius="45"></mat-spinner>
+    </div>
+</ng-template>
+
+<ng-template #failed>
+    <div class="full-height" fxLayout="column" fxFlex="100%" fxLayoutAlign="center center">
+        <h1 class="color-primary font-weight-thick">All retries failed, try again later.</h1>
+    </div>
+</ng-template>

@@ -1,0 +1,12 @@
+<h2 class="color-primary">Desciption</h2>
+
+<div class="position-relative" [class.description-max-height]="!isExpanded">
+    <p *ngFor="let paragraph of formattedDescription" 
+       class="bottom-spacing">
+        {{ paragraph }}
+    </p>
+
+    <span *ngIf="!isExpanded" (click)="expand()" class="read-more background-image-gradient-fade">
+        <h2 class="color-accent font-weight-thick">Read more</h2>
+    </span>
+</div>

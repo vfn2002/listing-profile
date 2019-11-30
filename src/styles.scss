@@ -1,1 +1,104 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+@import 'theme.scss';
+@include mat-core();
+
+html, body { height: 100%; }
+body { 
+    margin: 0;
+    font-family: 'Roboto Mono', "Helvetica Neue", monospace;
+    font-weight: 200;
+}
+h1, h2, h3, h4, h5 {
+    font-weight: 100;
+    font-family: 'Roboto Mono', "Helvetica Neue", monospace !important;
+    transition: 500ms ease;
+}
+p, label {
+    font-size: 18px;
+    transition: 500ms ease;
+    font-family: 'Roboto Mono', "Helvetica Neue", monospace !important;
+}
+mat-card, span  {
+    transition: 500ms ease;
+}
+
+.light-theme {
+    @include angular-material-theme($theme);
+
+    &.background-color-theme {
+        background-color: #f7f7f7;
+        transition: 500ms ease;
+    }
+
+    .background-image-gradient-fade {
+        background-image: linear-gradient(transparent, #ffffff);
+    }
+
+    .text-label {
+        color: rgba(0, 0, 0, 0.54);
+    }
+
+    @media only screen and (max-width: 800px) {
+        .read-more {
+            background-image: linear-gradient(transparent, #f7f7f7);
+        }
+    }
+}
+
+.dark-theme {
+    @include angular-material-theme($dark-theme);
+
+    &.background-color-theme {
+        background-color: #121212;
+        transition: 500ms ease;
+    }
+
+    .text-label {
+        color: white;
+    }
+
+    .background-image-gradient-fade {
+        background-image: linear-gradient(transparent, #424242);
+    }
+}
+
+.position-relative {
+    position: relative;
+}
+
+.color-accent {
+    color: mat-color($accent);
+}
+
+.color-primary {
+    color: mat-color($primary);
+}
+
+.color-light {
+    color: rgba(0, 0, 0, 0.54)
+}
+
+.font-weight-thin {
+    font-weight: 100;
+}
+
+.font-weight-normal {
+    font-weight: 500;
+}
+
+.font-weight-thick {
+    font-weight: 900;
+}
+
+.bottom-spacing {
+    margin-bottom: 12px;
+}
+
+.side-spacing {
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+.full-height {
+    min-height: 100vh;
+}

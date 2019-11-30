@@ -1,0 +1,7 @@
+<div class="side-spacing" *ngIf="_listing">
+    <h4 class="font-weight-thin">{{_listing.Postcode}}, {{_listing.Plaats}}</h4>
+    <h1 class="font-weight-thick color-primary">{{_listing.Adres}}</h1>
+    <h2>€ {{_listing.Prijs.Koopprijs}} {{_listing.Prijs.KoopAbbreviation}}</h2>
+</div>
+
+<app-image-swiper [images]="images"></app-image-swiper>

@@ -1,0 +1,20 @@
+.display-block {
+    display: block;
+}
+
+.card-width {
+    width: 800px;
+    max-width: 800px;
+}
+
+mat-card {
+    margin: 24px 0;
+}
+
+@media only screen and (max-width: 800px) {
+    mat-card {
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+    }
+}
