@@ -2,14 +2,12 @@ import { Injectable } from "@angular/core";
 import { Listing } from './listing.model';
 import { Observable, Subscriber, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { SecretService } from '../../common/services/secret.service';
 import { map, flatMap } from 'rxjs/operators';
 
 @Injectable()
 export class ListingService {
   constructor(
-    private _http: HttpClient,
-    private _secretService: SecretService
+    private _http: HttpClient
   ) {
     this.getRandomListingId()
   }

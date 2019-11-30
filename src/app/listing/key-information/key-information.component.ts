@@ -3,8 +3,7 @@ import { Listing } from '../state/listing.model'
 
 @Component({
   selector: 'app-key-information',
-  templateUrl: './key-information.component.html',
-  styleUrls: ['./key-information.component.scss']
+  templateUrl: './key-information.component.html'
 })
 export class KeyInformationComponent {
   @Input() set listing(listing: Listing) {

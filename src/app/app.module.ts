@@ -3,7 +3,6 @@ import { HttpClientModule } from '@angular/common/http'
 import { NgModule } from '@angular/core'
 import { AppComponent } from './app.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { SecretService } from './common/services/secret.service'
 import { Routes, RouterModule } from '@angular/router'
 import { NgxsModule } from '@ngxs/store'
 import { CommonModule } from '@angular/common'
@@ -30,9 +29,6 @@ const routes: Routes = [
     HttpClientModule,
     MaterialModule,
     FlexLayoutModule
-  ],
-  providers: [
-    SecretService
   ],
   bootstrap: [AppComponent]
 })
